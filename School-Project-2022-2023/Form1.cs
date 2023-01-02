@@ -25,13 +25,13 @@ namespace School_Project_2022_2023
             while (this.state != "stop")
             {
                 this.CreateGraphics()
-                    .DrawEllipse(new Pen(PickBrush()), new Rectangle(random.Next(0, this.Width), random.Next(0, this.Height), random.Next(0, 70), random.Next(0, 70)));
+                    .DrawEllipse(new Pen(Brush()), new Rectangle(random.Next(0, this.Width), random.Next(0, this.Height), random.Next(0, 70), random.Next(0, 70)));
                 this.FiguresCount++;
 
                 Thread.Sleep(CircleSleepTime);
             }
         }
-        private Brush PickBrush()
+        private Brush Brush()
         {
             Brush result = Brushes.Transparent;
 
@@ -46,5 +46,6 @@ namespace School_Project_2022_2023
 
             return result;
         }
+
     }
 }
