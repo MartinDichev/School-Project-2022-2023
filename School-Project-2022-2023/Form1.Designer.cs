@@ -61,6 +61,7 @@
             this.btnTriangle.TabIndex = 2;
             this.btnTriangle.Text = "Triangle";
             this.btnTriangle.UseVisualStyleBackColor = true;
+            this.btnTriangle.Click += new System.EventHandler(this.btnTriangle_Click);
             // 
             // Form1
             // 

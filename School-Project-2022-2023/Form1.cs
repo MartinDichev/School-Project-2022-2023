@@ -47,6 +47,16 @@ namespace School_Project_2022_2023
                 Thread.Sleep(RectangleSleepTime);
             }
         }
+
+        private void btnTriangle_Click(object sender, EventArgs e)
+        {
+            ThreadPool.QueueUserWorkItem(new WaitCallback(printTriangle));
+        }
+
+        public void printTriangle(object obj)
+        {
+
+        }
         private Brush CollorBrush()
         {
             Brush result = Brushes.Transparent;
