@@ -6,7 +6,7 @@ namespace School_Project_2022_2023
     {
         public Random random = new Random();
 
-        public string state = "wokring";
+        public string state = "Working";
         public const int RectangleSleepTime = 3000;
         public const int CircleSleepTime = 4000;
         public const int TriangleSleepTime = 2000;
@@ -88,6 +88,11 @@ namespace School_Project_2022_2023
             result = (Brush)properties[random].GetValue(null, null);
 
             return result;
+        }
+
+        private void btnCount_Click(object sender, EventArgs e)
+        {
+                MessageBox.Show($"There are {this.FiguresCount} figures on the screen.");
         }
     }
 }

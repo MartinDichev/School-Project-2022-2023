@@ -31,6 +31,7 @@
             this.btnCircle = new System.Windows.Forms.Button();
             this.btnRectangle = new System.Windows.Forms.Button();
             this.btnTriangle = new System.Windows.Forms.Button();
+            this.btnCount = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCircle
@@ -63,11 +64,22 @@
             this.btnTriangle.UseVisualStyleBackColor = true;
             this.btnTriangle.Click += new System.EventHandler(this.btnTriangle_Click);
             // 
+            // btnCount
+            // 
+            this.btnCount.Location = new System.Drawing.Point(12, 41);
+            this.btnCount.Name = "btnCount";
+            this.btnCount.Size = new System.Drawing.Size(75, 23);
+            this.btnCount.TabIndex = 3;
+            this.btnCount.Text = "Count";
+            this.btnCount.UseVisualStyleBackColor = true;
+            this.btnCount.Click += new System.EventHandler(this.btnCount_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCount);
             this.Controls.Add(this.btnTriangle);
             this.Controls.Add(this.btnRectangle);
             this.Controls.Add(this.btnCircle);
@@ -82,5 +94,6 @@
         private Button btnCircle;
         private Button btnRectangle;
         private Button btnTriangle;
+        private Button btnCount;
     }
 }
