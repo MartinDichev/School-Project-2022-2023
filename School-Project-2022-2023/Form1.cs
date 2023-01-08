@@ -55,7 +55,12 @@ namespace School_Project_2022_2023
 
         public void printTriangle(object obj)
         {
-
+            while (this.state != "stop")
+            {
+                PointF point1 = new PointF(new Random().Next(200, this.Width) + new Random().Next(20, 170), new Random().Next(0, this.Height - 50) + new Random().Next(20, 170));
+                PointF point2 = new PointF(new Random().Next(200, this.Width) + new Random().Next(20, 170), new Random().Next(0, this.Height - 50) + new Random().Next(20, 170));
+                PointF point3 = new PointF(new Random().Next(200, this.Width) + new Random().Next(20, 170), new Random().Next(0, this.Height - 50) + new Random().Next(20, 170));
+            }
         }
         private Brush CollorBrush()
         {
