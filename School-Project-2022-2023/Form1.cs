@@ -41,7 +41,7 @@ namespace School_Project_2022_2023
             while (this.state != "stop")
             {
                 this.CreateGraphics()
-                    .DrawRectangle(new Pen(CollorBrush()), new Rectangle(random.Next(0, this.Width), random.Next(0, this.Height), random.Next(0, 70), random.Next(0, 70)));
+                    .DrawRectangle(new Pen(CollorBrush()), new Rectangle(random.Next(0, this.Width), random.Next(0, this.Height), random.Next(0, 60), random.Next(0, 70)));
                 this.FiguresCount++;
 
                 Thread.Sleep(RectangleSleepTime);
@@ -57,9 +57,21 @@ namespace School_Project_2022_2023
         {
             while (this.state != "stop")
             {
-                PointF point1 = new PointF(new Random().Next(200, this.Width) + new Random().Next(20, 170), new Random().Next(0, this.Height - 50) + new Random().Next(20, 170));
-                PointF point2 = new PointF(new Random().Next(200, this.Width) + new Random().Next(20, 170), new Random().Next(0, this.Height - 50) + new Random().Next(20, 170));
-                PointF point3 = new PointF(new Random().Next(200, this.Width) + new Random().Next(20, 170), new Random().Next(0, this.Height - 50) + new Random().Next(20, 170));
+                PointF point1 = new PointF(new Random().Next(200, this.Width) + new Random().Next(10, 160), new Random().Next(0, this.Height - 50) + new Random().Next(10, 160));
+                PointF point2 = new PointF(new Random().Next(200, this.Width) + new Random().Next(10, 160), new Random().Next(0, this.Height - 50) + new Random().Next(10, 160));
+                PointF point3 = new PointF(new Random().Next(200, this.Width) + new Random().Next(10, 160), new Random().Next(0, this.Height - 50) + new Random().Next(10, 160));
+
+                PointF[] curvePoints =
+                {
+                    point1,
+                    point2,
+                    point3,
+                };
+
+                this.CreateGraphics().DrawPolygon(new Pen(CollorBrush()), curvePoints);
+                this.FiguresCount++;
+
+                Thread.Sleep(TriangleSleepTime);
             }
         }
         private Brush CollorBrush()
